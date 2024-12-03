@@ -1,49 +1,74 @@
 * {
-    box-sizing: border-box; /* Đảm bảo tính toán kích thước chính xác */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước chính xác */
 }
-.block-header{
-    justify-content: space-between; /* tạo khoảng cách cho các phần tử */
-    align-items: center; /* căn lề giữa cho các phần tử của tiêu đề */
+.block-header {
+  justify-content: space-between; /* tạo khoảng cách cho các phần tử */
+  align-items: center; /* căn lề giữa cho các phần tử của tiêu đề */
 }
-.label{
-    display: flex;
-    flex-direction: row; /* hiện theo chiều ngang */
-    justify-content: space-between; /* tạo khoảng cách giữa các phần tử */
+.label {
+  display: flex;
+  flex-direction: row; /* hiện theo chiều ngang */
+  justify-content: space-between; /* tạo khoảng cách giữa các phần tử */
 }
-.info{
-    display: flex;
-    flex-direction: column; /* hiện theo chiều dọc */
-    justify-content: space-between; /* tạo khoảng cách ở giữa các phần tử */
-    width: 100%; /* tăng chiều rộng của phần tử cha */
+.info {
+  display: flex;
+  flex-direction: column; /* hiện theo chiều dọc */
+  justify-content: space-between; /* tạo khoảng cách ở giữa các phần tử */
+  width: 100%; /* tăng chiều rộng của phần tử cha */
+}
+a.readmore {
+  color: blue; /* Đổi màu phần liên kết xem thêm */
 }
 #toast-container {
-    width: 400px; /* Tăng chiều rộng toast */
-    height: auto; /* Chiều cao tự động */
-  }
-
-  #toast-message {
-    font-size: 1.1rem; /* Tăng kích thước chữ */
-    padding: 20px; /* Thêm padding để tăng khoảng cách bên trong */
-  }
-
-  .toast-body {
-    font-weight: bold; /* Làm chữ đậm */
-  }
-
-  /* Căn giữa chính xác */
-  .position-fixed.top-50.start-50.translate-middle {
-    transform: translate(-50%, -50%);
-    z-index: 1055; /* Đảm bảo toast hiển thị trên cùng */
-  }
-.btn{
-    font-weight: bold; /* làm chữ trong nút đậm hơn */
+  width: 400px; /* Tăng chiều rộng toast */
+  height: auto; /* Chiều cao tự động */
 }
-a.readmore, a.link-sp{
-    text-decoration: none; /* tắt dấu gạch chân các đường liên kết */
-    color: cyan; /* đổi màu chữ các đường link cho dễ nhìn */
+
+#toast-message {
+  font-size: 1.1rem; /* Tăng kích thước chữ */
+  padding: 20px; /* Thêm padding để tăng khoảng cách bên trong */
 }
-h1, h2{
-    /* đổi màu chữ và in đậm các tiêu đề cho dễ nhìn */
-    color: lightcyan;
-    font-weight: bolder;
+
+.toast-body {
+  font-weight: bold; /* Làm chữ đậm */
+}
+
+/* Căn giữa chính xác */
+.position-fixed.top-50.start-50.translate-middle {
+  transform: translate(-50%, -50%);
+  z-index: 1055; /* Đảm bảo toast hiển thị trên cùng */
+}
+.btn {
+  font-weight: bold; /* làm chữ trong nút đậm hơn */
+}
+a.link-sp {
+  text-decoration: none; /* tắt dấu gạch chân các đường liên kết */
+  color: cyan; /* đổi màu chữ các đường link cho dễ nhìn */
+}
+h1,
+h2 {
+  /* đổi màu chữ và in đậm các tiêu đề cho dễ nhìn */
+  color: lightcyan;
+  font-weight: bolder;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+  background-color: #0056b3;
 }
