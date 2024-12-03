@@ -80,10 +80,23 @@ function addCart(code) {
   var number = parseInt(document.getElementById(code).value);
   var name = itemList[code].name;
   if (number == 0) return;
+
+  // Kiểm tra nếu số lượng vượt quá 100 ngay từ lần đầu
+  if (number > 100) {
+    window.localStorage.setItem(code, 100);
+    showToast(
+      `Mỗi mặt hàng chỉ có thể đặt 100 sản phẩm. Bạn đã đặt 100 sản phẩm của mặt hàng ${name}.`,
+      "danger"
+    );
+    return;
+  }
+
   if (typeof localStorage[code] === "undefined") {
+    // Lần đầu tiên thêm sản phẩm vào giỏ hàng
     window.localStorage.setItem(code, number);
   } else {
-    var current = parseInt(window.localStorage.getItem(code, number));
+    // Đã tồn tại sản phẩm trong giỏ hàng
+    var current = parseInt(window.localStorage.getItem(code));
     if (current + number > 100) {
       window.localStorage.setItem(code, 100);
       showToast(
@@ -95,6 +108,7 @@ function addCart(code) {
       window.localStorage.setItem(code, current + number);
     }
   }
+
   showToast(
     `Đã cập nhật ${name} với số lượng là ${parseInt(
       window.localStorage.getItem(code)
