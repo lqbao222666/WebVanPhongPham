@@ -23,27 +23,30 @@
     <link rel="stylesheet" href="stylelogin.css" />
   </head>
   <body>
+    <!-- Header chứa menu và các liên kết quan trọng -->
     <header class="box-menu">
       <ul class="d-flex align-items-center p-2">
-        <!-- Logo -->
         <li class="logo me-auto">
           <a href="index.html">
             <img src="./images/logos.png" alt="Company Logo" />
           </a>
-          <!-- Hiệu ứng spinner -->
           <div class="spinner-grow text-primary" style="width: 30px"></div>
           <div class="spinner-grow text-light" style="width: 30px"></div>
         </li>
-
-        <!-- Đăng Ký và Đăng Nhập -->
+        <!-- Liên kết Đăng ký -->
         <li class="highlight ms-3" id="register-item-vi">
-          <a href="signup.html"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+          <a href="signup.html" data-lang="menuSignup">
+            <i class="fa-solid fa-user"></i> Đăng Ký
+          </a>
         </li>
+        <!-- Liên kết Đăng nhập -->
         <li class="highlight ms-3" id="login-item-vi">
-          <a href="login.html"><i class="fa-regular fa-user"></i> Đăng Nhập</a>
+          <a href="login.html" data-lang="menuLogin">
+            <i class="fa-regular fa-user"></i> Đăng Nhập
+          </a>
         </li>
 
-        <!-- Chọn ngôn ngữ -->
+        <!-- Chuyển đổi ngôn ngữ -->
         <div class="language-toggle">
           <select id="languageSelector" class="form-select language-dropdown">
             <option value="vi" selected>🇻🇳 Tiếng Việt</option>
