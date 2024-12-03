@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập - Văn Phòng Phẩm</title>
+    <!-- Liên kết đến các icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Liên kết CSS của Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Liên kết CSS của Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <!-- Liên kết file CSS tùy chỉnh -->
+    <link rel="stylesheet" href="stylelogin.css" />
+  </head>
+  <body>
+    <!-- Header chứa menu và các liên kết quan trọng -->
+    <header class="box-menu">
+      <ul class="d-flex align-items-center p-2">
+        <li class="logo me-auto">
+          <a href="index.html">
+            <img src="./images/logos.png" alt="Company Logo" />
+          </a>
+          <div class="spinner-grow text-primary" style="width: 30px"></div>
+          <div class="spinner-grow text-light" style="width: 30px"></div>
+        </li>
+        <!-- Liên kết Đăng ký -->
+        <li class="highlight ms-3" id="register-item-vi">
+          <a href="signup.html"><i class="fa-solid fa-user"></i> Đăng Ký</a>
+        </li>
+        <!-- Liên kết Đăng nhập -->
+        <li class="highlight ms-3" id="login-item-vi">
+          <a href="login.html"><i class="fa-regular fa-user"></i> Đăng Nhập</a>
+        </li>
+
+        <!-- Chuyển đổi ngôn ngữ -->
+        <div class="language-toggle">
+          <select id="languageSelector" class="form-select language-dropdown">
+            <option value="vi" selected>🇻🇳 Tiếng Việt</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
+      </ul>
+    </header>
+
+    <!-- Phần chính: Khung đăng ký -->
+    <div
+      class="d-flex align-items-center justify-content-center vh-100"
+      style="
+        background: url(./images/signup.jpg);
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <!-- Container chứa form đăng ký -->
+      <div
+        class="container bg-transparent p-4 rounded shadow border border-primary"
+        style="max-width: 400px"
+      >
+        <!-- Tiêu đề form -->
+        <h2 class="text-center text-dark" data-lang="registerTitle">Đăng Ký</h2>
+        <!-- Form đăng ký -->
+        <form id="registerForm" method="POST">
+          <!-- Trường nhập Họ và tên -->
+          <div class="mb-3">
+            <label
+              for="fullName"
+              class="form-label text-dark fw-bold"
+              data-lang="fullNameLabel"
+            >
+              Họ và tên:
+            </label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                class="form-control bg-light border-info"
+                required
+              />
+              <!-- Icon người dùng -->
+              <span class="input-group-text bg-light text-info border-info">
+                <i class="bx bxs-user"></i>
+              </span>
+            </div>
+          </div>
+          <!-- Trường nhập Email -->
+          <div class="mb-3">
+            <label
+              for="email"
+              class="form-label text-dark fw-bold"
+              data-lang="emailLabel"
+            >
+              Email:
+            </label>
+            <div class="input-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control bg-light border-info"
+                required
+              />
+              <!-- Icon phong bì -->
+              <span class="input-group-text bg-light text-info border-info">
+                <i class="bx bxs-envelope"></i>
+              </span>
+            </div>
+          </div>
+          <!-- Trường nhập Mật khẩu -->
+          <div class="mb-3">
+            <label
+              for="password"
+              class="form-label text-dark fw-bold"
+              data-lang="passwordLabel"
+            >
+              Mật khẩu:
+            </label>
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control bg-light border-info"
+                required
+              />
+              <!-- Icon ổ khóa -->
+              <span class="input-group-text bg-light text-info border-info">
+                <i class="bx bxs-lock"></i>
+              </span>
+            </div>
+          </div>
+          <!-- Trường nhập Xác nhận mật khẩu -->
+          <div class="mb-3">
+            <label
+              for="confirm-password"
+              class="form-label text-dark fw-bold"
+              data-lang="confirmPasswordLabel"
+            >
+              Xác nhận mật khẩu:
+            </label>
+            <div class="input-group">
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                class="form-control bg-light border-info"
+                required
+              />
+              <!-- Icon ổ khóa -->
+              <span class="input-group-text bg-light text-info border-info">
+                <i class="bx bxs-lock"></i>
+              </span>
+            </div>
+          </div>
+          <!-- Trường nhập Địa chỉ (tuỳ chọn) -->
+          <div class="mb-3">
+            <label
+              for="address"
+              class="form-label text-dark fw-bold"
+              data-lang="addressLabel"
+            >
+              Địa chỉ giao hàng (tuỳ chọn):
+            </label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="form-control bg-light border-info"
+              />
+              <!-- Icon ngôi nhà -->
+              <span class="input-group-text bg-light text-info border-info">
+                <i class="bx bxs-home"></i>
+              </span>
+            </div>
+          </div>
+          <!-- Nút Đăng ký -->
+          <button
+            type="submit"
+            class="btn btn-primary w-100"
+            data-lang="registerButton"
+          >
+            Đăng ký
+          </button>
+          <!-- Liên kết chuyển đến Đăng nhập -->
+          <div class="text-center mt-3">
+            <a
+              href="index.html"
+              class="text-primary text-decoration-none"
+              data-lang="haveAccount"
+            >
+              Đã có tài khoản? Đăng nhập
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer chứa thông tin liên hệ và liên kết -->
+    <footer class="bg-dark text-light pt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Thông tin công ty -->
+          <div class="col-md-3 mb-4">
+            <img
+              src="./images/logos.png"
+              alt="Logo"
+              class="mb-3 rounded-circle"
+              style="width: 150px"
+            />
+            <p data-lang="specializing">
+              Chuyên cung cấp văn phòng phẩm chất lượng cao, giá cả hợp lý.
+            </p>
+          </div>
+          <!-- Các liên kết hữu ích -->
+          <div class="col-md-3 mb-4">
+            <h5 data-lang="usefulLinks">Liên kết hữu ích</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="aboutUs"
+                  >Về chúng tôi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="products"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="privacyPolicy"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="contactUs"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Thông tin liên hệ -->
+          <div class="col-md-3 mb-4">
+            <h5 data-lang="contactInfo">Thông tin liên hệ</h5>
+            <p>Địa chỉ: 31 Đường 3/2 Phường Xuân Khánh, Ninh Kiều, Cần Thơ</p>
+            <p data-lang="email">Email: lienhe@vanphongxanh.com</p>
+            <p data-lang="hotline">Hotline: 0987 654 321</p>
+          </div>
+          <!-- Kết nối với mạng xã hội -->
+          <div class="col-md-3 mb-4">
+            <h5 data-lang="connectWithUs">Kết nối với chúng tôi</h5>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-facebook fa-2x"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+            <a href="#" class="text-light"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Bản quyền -->
+          <div class="col text-center mt-3">
+            <p data-lang="copyright">
+              &copy; 2024 Văn phòng xanh. Tất cả quyền được bảo lưu.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Nút quay lại đầu trang -->
+      <button id="back-to-top" class="btn btn-primary" title="Lên đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </footer>
+
+    <!-- Liên kết JavaScript -->
+    <script src="maindk.js"></script>
+    <script src="language.js"></script>
+  </body>
+</html>

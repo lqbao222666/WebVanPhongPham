@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styletrangchu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./image/favicon.png" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="box-menu">
+      <ul class="d-flex align-items-center p-2">
+        <li class="logo me-auto">
+          <a href="index.html">
+            <img src="./images/logos.png" alt="Company Logo" />
+          </a>
+          <div class="spinner-grow text-primary" style="width: 30px"></div>
+          <div class="spinner-grow text-light" style="width: 30px"></div>
+        </li>
+
+        <li class="search-item d-flex align-items-center">
+          <input
+            type="text"
+            id="search-placeholder"
+            class="search-input form-control me-2"
+          />
+          <button class="search-button btn btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </li>
+        <li class="highlight ms-3" id="category-item-vi">
+          <a href="sanpham.html"
+            ><i class="fa-solid fa-bars"></i
+            ><span data-lang="itemlist"> Danh Mục Sản Phẩm </span></a
+          >
+        </li>
+        <li class="highlight ms-3" id="register-item-vi">
+          <a href="signup.html"
+            ><i class="fa-solid fa-user"></i
+            ><span data-lang="register"> Đăng Ký </span></a
+          >
+        </li>
+        <li class="highlight ms-3" id="login-item-vi">
+          <a href="login.html"
+            ><i class="fa-regular fa-user"></i>
+            <span data-lang="login"> Đăng Nhập </span></a
+          >
+        </li>
+        <li class="highlight ms-3">
+          <i class="fas fa-shopping-cart"></i>
+        </li>
+
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+          <select id="languageSelector" class="form-select language-dropdown">
+            <option value="vi" selected>🇻🇳 Tiếng Việt</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
+      </ul>
+    </header>
+
+    <main>
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Carousel Section -->
+          <div class="col-md-7">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#demo"
+                  data-bs-slide-to="2"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./images/banner-sale.png"
+                    alt="Sale Banner"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/banner-tichdiem.png"
+                    alt="Point Accumulation Banner"
+                    class="d-block w-100"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./images/banner-bts.png"
+                    alt="BTS Banner"
+                    class="d-block w-100"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#demo"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+          <!-- Banner Section -->
+          <div class="col-md-4 d-flex flex-column gap-3">
+            <div class="banner-small">
+              <img
+                src="./images/banner-gs.png"
+                alt="Right Banner 1"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+            <div class="banner-small">
+              <img
+                src="./images/giasi.png"
+                alt="Right Banner 2"
+                class="img-fluid rounded shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Introduction -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="intro-heading" data-lang="introvpct">
+            <span>VĂN PHÒNG PHẨM TẠI CẦN THƠ</span>
+          </h1>
+          <p class="intro-paragraph" data-lang="introp">
+            <span>
+              Cần Thơ không chỉ là thành phố hiện đại và phát triển bậc nhất tại
+              Đồng bằng sông Cửu Long mà còn là một trong những trung tâm kinh
+              tế,văn hoá, giáo dục, thương mại của cả nước. Chính vì vậy mà cầu
+              sử dụng các đồ dùng văn phòng phẩm cho văn phòng công ty, trường
+              học, gia đình, học tập cũng tăng cao nên việc tìm nguồn/nhà phân
+              phối sỉ văn phòng phẩm Cần Thơ để nhập hàng mở đại lý/cửa hàng
+              kinh doanh văn phòng phẩm (VPP), mua số lượng lớn có chiết khấu
+              tốt giá rẻ về sử dụng.</span
+            >
+          </p>
+          <br />
+          <h1 class="intro-heading" data-lang="items">
+            CÁC MẶT HÀNG VĂN PHÒNG PHẨM THÔNG DỤNG GIÁ SỈ TẠI CẦN THƠ
+          </h1>
+          <br />
+          <p class="intro-paragraph" data-lang="pitem">
+            Hầu hết các mặt hàng văn phòng phẩm cần thiết đều có thể tìm mua tại
+            Cần Thơ với giá sỉ ưu đãi cao từ các công ty chuyên phân phối VPP.
+            Đây cũng là một trong những các đặt mua sản phẩm tốt nhất, giúp tiết
+            kiệm kinh phí được các nhà bán lẻ, các đại lý văn phòng phẩm tại Cần
+            Thơ áp dụng nhiều nhất. Dưới đây là các sản phẩm VPP thông dụng hiện
+            nay:<br />
+            Giấy các loại : Giấy in – photo A4, Giấy in liên tục, Giấy note -
+            phân trang, Giấy bìa màu – Giấy than – Giấy decal. File đựng hồ sơ :
+            Bìa lá - Bìa trình ký – Bìa kiếng, Bìa còng – bìa hộp – bìa 3 dây,
+            Bìa nhựa – Bìa phân trang – Bìa lỗ, kệ rổ - kệ tầng mica – Hộp cắm
+            viết. Sổ - Tập : Sổ các loại, Tập vở - Bao thư, Sổ Namecard Bút mực
+            : Bút bi – Bút Gel, Bút lông bảng – bút lông dầu – bút dạ quang, Bút
+            xóa – Gôm tẩy, Bút chì – Chuốt chì, Mực lông bảng – Mực lông dầu –
+            Hộp dấu. Băng keo – Dao – Kéo – Thước : Băng keo – Keo Khô, Dao –
+            Kéo, Cắt băng keo – Thước. Bấm kim – Kim – Kẹp : Máy bấm kim – Bấm
+            lỗ, Kim bấm – kim kẹp, Kẹp bướm – Kẹp acco Và các thiết bị văn phòng
+            như Máy tính Casio, Film Fax, Pin các loại...
+          </p>
+          <h1 class="intro-heading" data-lang="heading">
+            ĐIỀU LƯU Ý KHI TÌM NHÀ PHÂN PHỐI VĂN PHÒNG PHẨM GIÁ SỈ
+          </h1>
+          <p class="intro-paragraph" data-lang="paragraph">
+            Có rất nhiều cách để đặt mua văn phòng phẩm tại Cần Thơ nhưng cách
+            tốt nhất là bạn nên đặt mua tại các văn phòng phẩm giá sỉ uy tín,
+            lâu năm và có chất lượng cao vì tại đây họ sẽ có những chính sách
+            riêng cho các chi nhánh, đại lý nên sẽ có nhiều mức giá chiết khấu
+            khi mua số lượng lớn. Họ sẽ luôn minh bạch về giá thành sản phẩm, có
+            hợp đồng rõ ràng. Hình thức giao hàng đa dạng, miễn phí giao hàng
+            tận nơi, đảm bảo yêu cầu về chất lượng sản phẩm. Các sản phẩm đa
+            dạng từ thương hiệu, kiểu dáng cho đến màu sắc
+          </p>
+          <h1 class="intro-heading" data-lang="aboutus">
+            GIỚI THIỆU VỀ CÔNG TY CỦA CHÚNG TÔI
+          </h1>
+          <p class="intro-paragraph" data-lang="company">
+            <b>Công Ty Văn Phòng Xanh</b> là một trong những doanh nghiệp tiên
+            phong trong việc cung cấp các giải pháp văn phòng hiện đại, tiết
+            kiệm và thân thiện với môi trường tại Việt Nam. Với cam kết đặt
+            khách hàng lên hàng đầu, chúng tôi luôn mang đến các sản phẩm và
+            dịch vụ chất lượng cao, đáp ứng mọi nhu cầu của khách hàng từ cá
+            nhân, doanh nghiệp nhỏ đến các tập đoàn lớn.
+          </p>
+          <h6 class="intro-heading" data-lang="vision">Tầm nhìn và Sứ mệnh</h6>
+          <p class="intro-paragraph" data-lang="mission">
+            <b>Tầm Nhìn</b> :Trở thành nhà cung cấp văn phòng phẩm hàng đầu tại
+            Việt Nam, dẫn đầu về sự đổi mới và phát triển bền vững.
+            <b>Sứ Mệnh</b>:Cung cấp giải pháp văn phòng toàn diện, giúp tối ưu
+            hóa không gian làm việc và giảm thiểu tác động tiêu cực đến môi
+            trường.
+          </p>
+          <h6 class="intro-heading" data-lang="product">Sản phẩm và Dịch vụ</h6>
+          <p class="intro-paragraph" data-lang="services">
+            Văn Phòng Xanh cung cấp đa dạng các sản phẩm văn phòng như: Giấy tái
+            chế, vật liệu thân thiện môi trường,Thiết bị tiết kiệm năng lượng
+            như máy in, máy tính, đèn chiếu sáng,...
+          </p>
+          <h6 class="intro-heading" data-lang="corevalues">Giá trị cốt lõi</h6>
+          <p class="intro-paragraph" data-lang="corevalue1">
+            <b>Bền vững</b>: Luôn hướng đến việc giảm thiểu rác thải và khuyến
+            khích sử dụng tài nguyên tái chế.
+          </p>
+          <p class="intro-paragraph" data-lang="corevalue2">
+            <b>Đổi mới</b>: Ứng dụng công nghệ mới để tạo ra giải pháp văn phòng
+            hiện đại và thông minh.
+          </p>
+          <p class="intro-paragraph" data-lang="corevalue3">
+            <b>Chất lượng</b>: Đảm bảo mọi sản phẩm và dịch vụ đều đáp ứng các
+            tiêu chuẩn cao nhất.
+          </p>
+          <p class="intro-paragraph" data-lang="corevalue4">
+            <b>Khách hàng là trung tâm</b>: Đội ngũ tận tâm, luôn lắng nghe và
+            đáp ứng mọi nhu cầu của khách hàng.
+          </p>
+        </div>
+        <!-- Partners -->
+        <h1 class="intro-heading" id="partners-heading-vi" data-lang="brand">
+          Các đối tác thương hiệu của chúng tôi
+        </h1>
+        <h1 id="partners-heading-en" style="display: none">
+          Our Brand Partners
+        </h1>
+        <div class="row four-section">
+          <div class="col-3">
+            <div class="image-container">
+              <img src="./images/logothienlong.jpg" alt="Thien Long Logo" />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="image-container">
+              <img src="./images/logocasio.png" alt="Casio Logo" />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="image-container">
+              <img src="./images/logodoubleA.png" alt="Double A Logo" />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="image-container">
+              <img src="./images/logodeli.png" alt="Deli Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light pt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Logo và thông tin -->
+          <div class="col-md-3 mb-4">
+            <img
+              src="./images/logos.png"
+              alt="Logo"
+              class="mb-3 rounded-circle"
+              style="width: 150px"
+            />
+            <p data-lang="specializing">
+              Chuyên cung cấp văn phòng phẩm chất lượng cao, giá cả hợp lý.
+            </p>
+          </div>
+          <!-- Liên kết -->
+          <div class="col-md-3 mb-4">
+            <h5 data-lang="lk">Liên kết hữu ích</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="our"
+                  >Về chúng tôi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="item"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="lock"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-light text-decoration-none"
+                  data-lang="contact"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Thông tin liên hệ -->
+          <div class="col-md-3 mb-4">
+            <h5 data-lang="in4contact">Thông tin liên hệ</h5>
+            <p>Địa chỉ: 31 Đường 3/2 Phường Xuân Khánh, Ninh Kiều, Cần Thơ</p>
+            <p>Email: lienhe@vanphongxanh.com</p>
+            <p>Hotline: 0987 654 321</p>
+          </div>
+          <!-- Mạng xã hội -->
+          <div class="col-md-3 mb-4">
+            <h5 data-lang="connect-with-us">Kết nối với chúng tôi</h5>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-facebook fa-2x"></i
+            ></a>
+            <a href="#" class="text-light me-3"
+              ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+            <a href="#" class="text-light"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center mt-3">
+            <p data-lang="copyright">
+              &copy; 2024 Văn phòng xanh. Tất cả quyền được bảo lưu.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button id="back-to-top" class="btn btn-primary" title="Lên đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </footer>
+    <script src="dangonngu.js"></script>
+  </body>
+</html>
