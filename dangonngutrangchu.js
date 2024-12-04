@@ -119,3 +119,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Khởi tạo trang với ngôn ngữ mặc định (mặc định là tiếng Việt)
   changeLanguage(languageSelector.value);
 });
+
+// Hiển thị nút khi cuộn xuống 100px
+window.onscroll = function () {
+  const backToTop = document.getElementById("back-to-top");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+};
+
+// Cuộn lên đầu trang khi nhấn nút
+document.getElementById("back-to-top").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
